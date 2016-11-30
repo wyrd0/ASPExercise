@@ -160,23 +160,25 @@ Layout=null;
           <input type="submit" name="input" />
                     </form>
           <h3>@ViewBag.Message</h3>
-      </div>
-        <table border="1" >
-        @foreach(var item in ViewBag.productList)
-        {
-            <tr>
-                <td>
-                    @item.Name
-                </td>
-                <td>
-                    @item.Price
-                </td>
-                <td>
-                    <a href="/Main/Order?product=@item.Name">Add to cart</a>
-                </td>
-            </tr>
-        }
-        </table>
+     
+          <table border="1">
+              @foreach (var item in ViewBag.productList)
+              {
+                  <tr>
+                      <td>
+                          @item.Name
+                      </td>
+                      <td>
+                          @item.Price
+                      </td>
+                      <td>
+                          <a href="/Main/Order?product=@item.Name">Add to cart</a>
+                      </td>
+                  </tr>
+              }
+          </table>
+       </div>
+       
       <!-- end of content -->
       <!-- sidebar -->
       <aside class="sidebar">
@@ -194,7 +196,7 @@ Layout=null;
                       foreach (var item in ViewBag.Cart)
                       {
 
-                          <tr><td>@item.Name</td><td>@item.Price</td><td>@item.Qty</td></tr>
+                          <tr><td>@item.Name</td><td>@item.Price</td><td>@item.Qty</td><td>@item.lineTotal</td></tr>
 
                       }
 

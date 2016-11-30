@@ -270,6 +270,8 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Main\Admin.cshtml" />
+    <Content Include="Views\Main\AddProduct.cshtml" />
     <None Include="Views\Main\Index.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
