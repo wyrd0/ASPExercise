@@ -1,7 +1,7 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
+@model CoffeShopApp.Models.Product
 
 <!DOCTYPE html>
 
@@ -31,10 +31,24 @@
       </table>
 
         <a href="/Main/AddProduct">Add a new product</a>
+       
+            
+        <form action="Search" method="get">
+            @if (ViewBag.productList != null)
+            {
+                var name = Model.Name;
+            <input type="text" name="Search" />
+            <input type="submit" name="product=@name" />
+            <br />
+            }
+            @ViewBag.productList;
+        </form>
+        <!--<a href="/Main/Search">Search for a product</a>-->
 
 
 
 
-    </div>
+
+</div>
 </body>
 </html>

@@ -99,13 +99,14 @@ namespace CoffeShopApp.Controllers
         public ActionResult Search(string product)
         {
             CoffeeShopDBEntities2 dbContext = new CoffeeShopDBEntities2();
-            
-
-            //check for null
+            List<Product> productList = dbContext.Products.ToList();
+           
+            //check for null in cshtml
 
             List<Product> Found = new List<Product>();
             Found.Add(dbContext.Products.Find(product));
-            ViewBag.productList = Found;
+            
+            ViewBag.Found = Found;
             return View("Index");
         }
 
